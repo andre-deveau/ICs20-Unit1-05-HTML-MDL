@@ -1,33 +1,7 @@
 # ICs20-Unit1-05-HTML-MDL
-##################################################
-# Run Mr Coxall's Super Linter against code base #
-##################################################
----
-name: Mr Coxall's Super Linter
-on: [push, pull_request]
-jobs:
-  run-linters:
-    name: Mr Coxall's Super Linter
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out Git repository
-        uses: actions/checkout@main
-      # remove section if you do not have any html, js or ts files!
-      - name: Prettify code
-        uses: Mr-Coxall/prettier_action@main
-        with:
-          # run Prettier and change code that needs fixing, before next section
-          prettier_options: --write **/*.{html,css,js,ts,jsx,tsx,json}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Run GitHub Super Linter
-        uses: github/super-linter@main
-        env:
-          VALIDATE_ALL_CODEBASE: true
-          LINTER_RULES_PATH: /
-          VALIDATE_CLANG_FORMAT: false
-          VALIDATE_JAVASCRIPT_STANDARD: false
-          VALIDATE_PYTHON_FLAKE8: false
-          VALIDATE_GITLEAKS: false # for secrets detection
-          VALIDATE_JSCPD: false # for copy and paste detection
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+[![Mr Coxall's Super Linter](https://github.com/andre-deveau/ICs20-Unit1-05-HTML-MDL/workflows/Mr%20Coxall's%20Super%20Linter/badge.svg)](https://github.com/andre-deveau/ICs20-Unit1-05-HTML-MDL/actions/)
+
+[![Run on Repl.it](https://repl.it/badge/github/andre-deveau/ICs20-Unit1-05-HTML-MDL)](https://repl.it/github/andre-deveau/ICs20-Unit1-05-HTML-MDL)
+
+This site can be found at: [https://andre-deveau.github.io/ICs20-Unit1-05-HTML-MDL](https://andre-deveau.github.io/ICs20-Unit1-05-HMTL-MDL)
